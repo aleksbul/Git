@@ -1,17 +1,9 @@
 ﻿Console.WriteLine("Введите число");
 double number = double.Parse(Console.ReadLine());
-int pow = 0;
-
-// pow - степень числа 2 при которой значение 2 в степени pow максимально близко к заданному числу, но не больше его.
-
-for (int i = 0; Math.Pow(2, i) <= number; i++)
-{
-    pow = i;
-}
+int pow = Convert.ToInt32(Math.Log(number, 2));
 
 int size = pow + 1;
 int[] array = new int[size];
-
 
 for (int i = 0; i < size; i++)
 {
